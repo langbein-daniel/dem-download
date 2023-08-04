@@ -1,6 +1,14 @@
 # EU DEM Download
 
-Usage:
+Download DEM files of the EU.
+
+Example:
+
+Input was the rectangular bounding box `10.011636032586688,48.70792025947608,12.223993889052613,50.25793688217101` around the convex hull of all public transit stops of the VGN (pink). As result, nine DEM tiles were downloaded (black and white images) which cover the whole bounding box.
+
+![img.png](img.png)
+
+## Usage
 
 To download DEM files covering a rectangular region of Europe (bounding box, consisting of four coordinates),
 run  [./download_dem_zip.py](./download_dem_zip.py).
@@ -10,15 +18,17 @@ run [./extract_tif_and_credits.py](./extract_tif_and_credits.py).
 
 More details can be retrieved by passing the argument `-h` or `--help` to one of the commands.
 
-## Definitions
+## Notes
+
+### Definitions
 
 Digital Surface Model (DSM), Digital Terrain Model (DTM): https://www.opendem.info/definitions.html
 
-## Arc Seconds in Meters
+### Arc Seconds in Meters
 
 https://www.opendem.info/arc2meters.html
 
-## Open DEM EU - High Resolution
+### Open DEM EU - High Resolution
 
 https://www.opendem.info/opendemeu_background.html
 
@@ -30,7 +40,7 @@ Resolutions below 1 m were recalculated to a 1 m DTM with a cubic resampling met
 - Download link example: http://opendemdata.info/data/europe_laea/N285E445.zip
 - Square of four tiles: N290E440, N290E445, N285E440, N285E445
 
-## Open DEM EU - Medium Resolution
+### Open DEM EU - Medium Resolution
 
 https://www.opendem.info/opendemeu_background.html
 
@@ -41,7 +51,7 @@ and vertical datum EVRS2000 with geoid EGG08 (EPSG:5730).
 - Download link example: https://www.muaythaiclinch.info/opendem_europe_download/eu_4258/N49E011.zip
 - Square of four tiles: N49E010, N49E011, N50E010, N50E011
 
-### How to cite the selected Datasets:
+#### How to cite the selected Datasets:
 
 - Produced using Copernicus data and information funded by the European Union - EU-DEM layers.
 - Land NRW (2017) Data licence Germany – attribution – version 2.0 (www.govdata.de/dl-de/by-2-0)
