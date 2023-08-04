@@ -13,10 +13,35 @@ Input was the rectangular bounding box `10.011636032586688,48.70792025947608,12.
 To download DEM files covering a rectangular region of Europe (bounding box, consisting of four coordinates),
 run  [./download_dem_zip.py](./download_dem_zip.py).
 
+```
+usage: download_dem_zip.py [-h] [--target-dir TARGET_DIRECTORY] BOUNDING_BOX
+
+Download DEM tiles covering a bounding box from OpenDemEU with 1 arc second resolution. For details, see "1-arc second
+European geographic tiles" at https://www.opendem.info/opendemeu_background.html
+
+positional arguments:
+  BOUNDING_BOX          Bounding Box
+
+options:
+  -h, --help            show this help message and exit
+  --target-dir TARGET_DIRECTORY
+                        Target directory where downloaded .zip files are stored
+```
+
 To extract the GeoTIFF (`.tif`) files and to create one JSON file with credits,
 run [./extract_tif_and_credits.py](./extract_tif_and_credits.py).
 
-More details can be retrieved by passing the argument `-h` or `--help` to one of the commands.
+```
+usage: extract_tif_and_credits.py [-h] [--src-dir SOURCE_DIR] [--dst_dir TARGET_DIR]
+
+Extract .tif files from .zip files of source directory into target directory and create one JSON file with credits of
+the open data sources.
+
+options:
+  -h, --help            show this help message and exit
+  --src-dir SOURCE_DIR  Source directory with .zip files
+  --dst_dir TARGET_DIR  Target directory for extracted .tif files and credits.json
+```
 
 ## Notes
 
