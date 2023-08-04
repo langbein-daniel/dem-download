@@ -38,6 +38,7 @@ def extract_tif_and_credits(src_dir: Path, dst_dir: Path):
     src_files = [file for file in src_dir.iterdir()
                  if file.is_file()]
     for src_file in src_files:
+        print(f'Extracting {src_file.name} ...')
         with zipfile.ZipFile(src_file, 'r') as source_zf:
             # We expect the zip file to contain exactly one .tif and one readme.txt file.
             tifs = [x for x in source_zf.infolist()

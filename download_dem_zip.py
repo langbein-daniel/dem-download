@@ -49,7 +49,7 @@ def download(min_lon: float, min_lat: float, max_lon: float, max_lat: float,
     for url, filename in tile_urls(min_lon, min_lat, max_lon, max_lat):
         target = dst_dir / filename
 
-        if target.exists():
+        if target.is_file():
             print(f'Skipping {filename} (does already exist)')
             continue
         print(f'Downloading {filename} ...')
