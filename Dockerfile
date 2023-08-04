@@ -18,4 +18,4 @@ RUN python ./download_dem_zip.py "${BBOX}" \
     && mv ./dem/credits.json /data \
     && rm -r ./zip ./dem
 
-# /data contains multiple *.tif files and credits.json \
+# /data contains multiple *.tif files and credits.json
