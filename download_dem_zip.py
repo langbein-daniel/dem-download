@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 import argparse
 import math
 from pathlib import Path
@@ -19,7 +21,7 @@ def main():
                         metavar='BOUNDING_BOX')
     parser.add_argument('--target-dir',
                         dest='dst_dir',
-                        help='Target directory',
+                        help='Target directory where downloaded .zip files are stored',
                         type=Path,
                         metavar='TARGET_DIRECTORY',
                         default=Path('zip'))
