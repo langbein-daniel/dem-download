@@ -73,7 +73,9 @@ def extract_tif_and_credits(src_dir: Path, dst_dir: Path):
                 unique_credits.add(credits_str)
 
     # Create JSON file containing all credits.
-    credits_json = json.dumps(list(unique_credits))
+    credits_json = json.dumps(
+        [{'text': credits_str} for credits_str in unique_credits]
+    )
     (dst_dir / 'credits.json').write_text(credits_json)
 
 
