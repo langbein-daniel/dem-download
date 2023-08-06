@@ -28,7 +28,7 @@ options:
                         Target directory where downloaded .zip files are stored
 ```
 
-To extract the GeoTIFF (`.tif`) files and to create one JSON file with credits,
+To extract the [GeoTIFF](https://trac.osgeo.org/geotiff) (`.tif`) files and to create one JSON file with credits,
 run [./extract_tif_and_credits.py](./extract_tif_and_credits.py).
 
 ```
